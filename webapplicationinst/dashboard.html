@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Training Training</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>Training</h1>
+                    <p class="tagline">Transform Your Career</p>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="my-courses.html">My Courses</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="logout" class="btn-login">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard">
+        <div class="container">
+            <h1>Welcome, <span id="studentName">Student</span>!</h1>
+            
+            <div class="dashboard-grid">
+                <!-- Quick Stats -->
+                <div class="dashboard-card">
+                    <h3>📚 Enrolled Courses</h3>
+                    <p class="stat-number" id="enrolledCourses">0</p>
+                </div>
+                
+                <div class="dashboard-card">
+                    <h3>✅ Completed Courses</h3>
+                    <p class="stat-number" id="completedCourses">0</p>
+                </div>
+                
+                <div class="dashboard-card">
+                    <h3>📝 Assignments</h3>
+                    <p class="stat-number" id="pendingAssignments">0</p>
+                </div>
+                
+                <div class="dashboard-card">
+                    <h3>🎓 Certificates</h3>
+                    <p class="stat-number" id="certificates">0</p>
+                </div>
+            </div>
+
+            <!-- Recent Courses -->
+            <div class="section-box">
+                <h2>My Courses</h2>
+                <div id="myCourses" class="courses-list">
+                    <p>Loading courses...</p>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="section-box">
+                <h2>Recent Activity</h2>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <p><strong>Course Enrolled:</strong> Your selected course</p>
+                        <span class="activity-date">Today</span>
+                    </div>
+                    <div class="activity-item">
+                        <p><strong>Welcome:</strong> Account created successfully</p>
+                        <span class="activity-date">Today</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Training Training</h3>
+                    <p>Empowering careers through quality education and training</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="my-courses.html">My Courses</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📧 info@Training.in</p>
+                    <p>📞 +91 9999999999</p>
+                    <p>📍 Hyderabad, India</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Training Training. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

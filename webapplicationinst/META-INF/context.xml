@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <!-- 
+        Oracle DataSource Configuration for Tomcat
+        This file should be placed in META-INF/context.xml
+        
+        IMPORTANT: Before deploying, update the following values:
+        - username: Your Oracle database username
+        - password: Your Oracle database password
+        - url: Your Oracle database connection URL
+    -->
+    
+    <Resource name="jdbc/OracleDS"
+              auth="Container"
+              type="javax.sql.DataSource"
+              driverClassName="oracle.jdbc.OracleDriver"
+              url="jdbc:oracle:thin:@localhost:1521:XE"
+              username="your_username"
+              password="your_password"
+              maxTotal="20"
+              maxIdle="10"
+              maxWaitMillis="10000"
+              removeAbandonedOnBorrow="true"
+              removeAbandonedTimeout="60"
+              logAbandoned="true"
+              validationQuery="SELECT 1 FROM DUAL"
+              testOnBorrow="true"/>
+    
+    <!--
+        Configuration Parameters Explained:
+        
+        - name: JNDI name (must match the resource-ref in web.xml)
+        - auth: Container-managed authentication
+        - type: DataSource type
+        - driverClassName: Oracle JDBC driver class
+        - url: Oracle database connection string
+              Format: jdbc:oracle:thin:@hostname:port:SID
+              Example: jdbc:oracle:thin:@localhost:1521:XE (for Oracle XE)
+              Example: jdbc:oracle:thin:@localhost:1521:ORCL (for Oracle Enterprise)
+        - username: Database username
+        - password: Database password
+        - maxTotal: Maximum number of active connections
+        - maxIdle: Maximum number of idle connections
+        - maxWaitMillis: Maximum time to wait for a connection (milliseconds)
+        - removeAbandonedOnBorrow: Remove abandoned connections
+        - removeAbandonedTimeout: Timeout for abandoned connections (seconds)
+        - logAbandoned: Log abandoned connections for debugging
+        - validationQuery: Query to validate connections
+        - testOnBorrow: Validate connection before borrowing from pool
+    -->
+</Context>
